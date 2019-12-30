@@ -28,22 +28,12 @@ namespace Blog.API.Infrastructure.Extensions
                 options.DescribeAllEnumsAsStrings();
                 options.DescribeAllParametersInCamelCase();
                 options.DescribeStringEnumsInCamelCase();
-                ////options.EnableAnnotations();
 
                 // Add the XML comment file for this assembly, so its contents can be displayed.
-                //options.IncludeXmlCommentsIfExists(assembly);
 
                 options.OperationFilter<ApiVersionOperationFilter>();
                 options.OperationFilter<TokenOperationFilter>();
-
-                ///options.OperationFilter<CorrelationIdOperationFilter>();
-                ///options.OperationFilter<ForbiddenResponseOperationFilter>();
-                ///options.OperationFilter<UnauthorizedResponseOperationFilter>();
-
-                // Show an example model for JsonPatchDocument<T>.
-                ///options.SchemaFilter<JsonPatchDocumentSchemaFilter>();
-                // Show an example model for ModelStateDictionary.
-                ///options.SchemaFilter<ModelStateDictionarySchemaFilter>();
+                
 
                 // Set the comments path for the Swagger JSON and UI.
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
